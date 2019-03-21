@@ -26,9 +26,9 @@ func generateSslCert(){
 	max := new(big.Int)
 	serialNumber := max.Exp(big.NewInt(2), big.NewInt(130), nil).Sub(max, big.NewInt(1))
 	subject := pkix.Name{
-		Organization: []string{"Ibrahim Extreme Engeneering"},
+		Organization: []string{"Your Organization"},
 		OrganizationalUnit: []string{"Engineering"},
-		CommonName: "Software Engineering",
+		CommonName: "Your custom name",
 	}
 
 	template := x509.Certificate{
